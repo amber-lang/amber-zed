@@ -3,6 +3,7 @@
 [
     "if"
     "loop"
+    "for"
     "return"
     "fun"
     "else"
