@@ -13,6 +13,13 @@ let agent = has_failed("uname -a")
 
 echo ""
 
+for char in chars(agent) {
+    if char == " " {
+        break
+    }
+    agent = agent + char
+}
+
 fun get_latest_release_tag() {
     let tag_url = "https://api.github.com/repos/Ph0enixKM/{name}/releases/latest"
     let tag_json = $curl -sL "{tag_url}"$?
