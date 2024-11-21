@@ -40,7 +40,7 @@
 (status) @keyword
 (command) @string
 (handler) @keyword
-(block) @delimeter
+(block) @delimiter
 (variable_init) @keyword
 (variable_assignment) @delimiter
 (variable) @variable
