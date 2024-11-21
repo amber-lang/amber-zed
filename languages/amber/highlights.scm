@@ -30,6 +30,7 @@
     "is"
     "unsafe"
     "trust"
+    "const"
 ] @keyword
 
 ; Literals
