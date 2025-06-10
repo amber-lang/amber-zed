@@ -3,9 +3,13 @@ name = "Amber"
 description = "Amber Language support."
 version = "0.1.2"
 schema_version = 1
-authors = ["Paweł Karaś <pkaras.it@gmail.com>"]
+authors = ["Paweł Karaś <pkaras.it@gmail.com>", "Hubert Jabłoński <hubik080@gmail.com>"]
 repository = "https://github.com/Ph0enixKM/zed-amber-extension"
 
 [grammars.amber]
 repository = "https://github.com/amber-lang/tree-sitter-amber"
 commit = "c6df3ec2ec243ed76550c525e7ac3d9a10c6c814"
+
+[language_servers.amber]
+name = "Amber Language Server"
+language = "Amber"
