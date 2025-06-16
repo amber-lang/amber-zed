@@ -13,6 +13,10 @@ let agent = has_failed("uname -a")
 
 echo ""
 
+len test
+lines test
+cd test
+
 for char in chars(agent) {
     if char == " " {
         break

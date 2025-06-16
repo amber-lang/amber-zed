@@ -8,7 +8,7 @@ repository = "https://github.com/Ph0enixKM/zed-amber-extension"
 
 [grammars.amber]
 repository = "https://github.com/amber-lang/tree-sitter-amber"
-commit = "c6df3ec2ec243ed76550c525e7ac3d9a10c6c814"
+commit = "cafa15e6224fcb43cc88275e1afaf33179a4f393"
 
 [language_servers.amber]
 name = "Amber Language Server"

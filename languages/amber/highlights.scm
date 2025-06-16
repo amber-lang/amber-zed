@@ -14,6 +14,8 @@
     "or"
     "not"
     "let"
+    "len"
+    "lines"
     "pub"
     "main"
     "echo"
@@ -43,6 +45,8 @@
 (block) @delimiter
 (variable_init) @keyword
 (variable_assignment) @delimiter
+(builtin_stmt) @keyword
+(builtin_expr) @keyword
 (variable) @variable
 (escape_sequence) @constant.character.escape
 (type_name_symbol) @type
