@@ -1,7 +1,7 @@
 id = "amber"
 name = "Amber"
 description = "Amber Language support."
-version = "0.1.2"
+version = "0.2.0"
 schema_version = 1
 authors = ["Paweł Karaś <pkaras.it@gmail.com>", "Hubert Jabłoński <hubik080@gmail.com>"]
 repository = "https://github.com/Ph0enixKM/zed-amber-extension"
