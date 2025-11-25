@@ -27,11 +27,15 @@
     "in"
     "fail"
     "failed"
+    "succeeded"
+    "exited"
     "silent"
+    "sudo"
     "nameof"
     "is"
     "unsafe"
     "trust"
+    "while"
 ] @keyword
 
 ; Literals
@@ -41,8 +45,9 @@
 (string) @string
 (status) @keyword
 (command) @string
-(handler) @keyword
 (block) @delimiter
+(parentheses) @delimiter
+(while_loop) @keyword
 (variable_init) @keyword
 (variable_assignment) @delimiter
 (builtin_stmt) @keyword
@@ -54,6 +59,7 @@
 (reference) @keyword
 (preprocessor_directive) @comment
 (shebang) @comment
+(parameter_list) @delimiter
 (function_definition
     name: (variable) @function.method)
 (function_call

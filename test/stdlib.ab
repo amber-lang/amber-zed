@@ -24,7 +24,7 @@ pub fun lines(text: Text): [Text] {
 }
 
 pub fun words(text: Text): [Text] {
-  return split(text, " ")
+    return split(text, " ")
 }
 
 pub fun join(list: [Text], delimiter: Text): Text {
@@ -52,7 +52,7 @@ pub fun upper(text: Text): Text {
 }
 
 #[allow_absurd_cast]
-pub fun parse(text: Text): Num {
+pub fun parse(text: Text): Num? {
     $[ -n "{text}" ] && [ "{text}" -eq "{text}" ] 2>/dev/null$?
     return text as Num
 }

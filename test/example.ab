@@ -4,12 +4,10 @@ let a = 12
 
 let a = [1, 2, 3, 4]
 
-trust $test$
+sudo $test$
 
 status
 
-pub fun test(ref arg1: Num, arg2: Text = [1, 2, 3, 4]): Null {
+pub fun test(ref arg1: Int, arg2: [Num] = [1, 2, 3, 4]): Null {
     let a = 12
 }
-
-test()
