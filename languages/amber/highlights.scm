@@ -60,6 +60,7 @@
 (preprocessor_directive) @comment
 (shebang) @comment
 (parameter_list) @delimiter
+(handler_propagation) @delimiter
 (function_definition
     name: (variable) @function.method)
 (function_call
