@@ -24,6 +24,7 @@
     "lines"
     "loop"
     "main"
+    "mv"
     "nameof"
     "not"
     "or"
