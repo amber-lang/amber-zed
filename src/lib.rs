@@ -1,6 +1,6 @@
 use std::fs;
 
-use zed_extension_api::{self as zed, settings::LspSettings, LanguageServerId, Result};
+use zed_extension_api::{self as zed, LanguageServerId, Result, settings::LspSettings};
 
 struct AmberLsp {
     path: String,
@@ -23,6 +23,7 @@ impl AmberExtension {
         let binary_args = binary_settings
             .as_ref()
             .and_then(|binary_settings| binary_settings.arguments.clone());
+        
         if let Some(path) = binary_settings.and_then(|binary_settings| binary_settings.path) {
             return Ok(AmberLsp {
                 path,
@@ -48,7 +49,7 @@ impl AmberExtension {
             "amber-lang/amber-lsp",
             zed::GithubReleaseOptions {
                 require_assets: true,
-                pre_release: true,
+                pre_release: false,
             },
         )?;
 
