@@ -5,3 +5,5 @@ target/
 target/*/
 
 extension.wasm
+
+.DS_Store

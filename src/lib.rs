@@ -45,7 +45,7 @@ impl AmberExtension {
         );
 
         let release = zed::latest_github_release(
-            "KrosFire/amber-lsp",
+            "amber-lang/amber-lsp",
             zed::GithubReleaseOptions {
                 require_assets: true,
                 pre_release: true,
@@ -109,7 +109,6 @@ impl AmberExtension {
         })
     }
 }
-
 
 impl zed::Extension for AmberExtension {
     fn new() -> Self {
