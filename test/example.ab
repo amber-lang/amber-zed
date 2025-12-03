@@ -1,11 +1,9 @@
-// unsafe $command$ failed {}}
 let a = 12
-// Test
 
 let a = [1, 2, 3, 4]
-
-sudo $test$?
 
 pub fun test(ref arg1: Int, arg2: [Num] = [1, 2, 3, 4]): Null {
     let a = 12
 }
+
+let x = 123
