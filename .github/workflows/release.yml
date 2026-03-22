@@ -1,0 +1,37 @@
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    name: Release Zed Extension
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Validate tag matches Extension version
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          EXT_VERSION="$(grep -E '^version = ' extension.toml | head -n1 | sed -E 's/version = \"([^\"]+)\"/\1/')"
+
+          if [ -z "$EXT_VERSION" ]; then
+            echo "::error::Cannot read version from extension.toml"
+            exit 1
+          fi
+
+          if [ "$TAG_VERSION" != "$EXT_VERSION" ]; then
+            echo "::error::Tag version ($TAG_VERSION) does not match extension.toml version ($EXT_VERSION)"
+            exit 1
+          fi
+
+          echo "Version check passed: $EXT_VERSION"
+
+      - name: Auto PR to Zed Extensions
+        uses: huacnlee/zed-extension-action@v2
+        with:
+          extension-name: amber
+          push-to: your-name/extensions
+        env:
+          COMMITTER_TOKEN: ${{ secrets.COMMITTER_TOKEN }}
