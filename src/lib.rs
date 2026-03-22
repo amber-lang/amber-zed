@@ -7,9 +7,7 @@ struct AmberLsp {
     args: Option<Vec<String>>,
 }
 
-struct AmberExtension {
-    cached_binary_path: Option<String>,
-}
+struct AmberExtension {}
 
 impl AmberExtension {
     fn language_server_binary(
@@ -29,15 +27,6 @@ impl AmberExtension {
                 path,
                 args: binary_args,
             });
-        }
-
-        if let Some(path) = &self.cached_binary_path {
-            if fs::metadata(path).map_or(false, |stat| stat.is_file()) {
-                return Ok(AmberLsp {
-                    path: path.clone(),
-                    args: binary_args,
-                });
-            }
         }
 
         zed::set_language_server_installation_status(
@@ -103,7 +92,6 @@ impl AmberExtension {
             }
         }
 
-        self.cached_binary_path = Some(binary_path.clone());
         Ok(AmberLsp {
             path: binary_path,
             args: binary_args,
@@ -113,9 +101,7 @@ impl AmberExtension {
 
 impl zed::Extension for AmberExtension {
     fn new() -> Self {
-        Self {
-            cached_binary_path: None
-        }
+        Self {}
     }
 
     fn language_server_command(
