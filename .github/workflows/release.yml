@@ -32,6 +32,6 @@ jobs:
         uses: huacnlee/zed-extension-action@v2
         with:
           extension-name: amber
-          push-to: your-name/extensions
+          push-to: amber-lang/extensions
         env:
           COMMITTER_TOKEN: ${{ secrets.COMMITTER_TOKEN }}
